@@ -121,11 +121,11 @@ body {
 
 .about-me-section-wrapper {
   display: flex;
-  align-items: flex-start; /* Ensures content aligns to the top */
-  justify-content: center; /* Centers the whole wrapper block horizontally */
+  align-items: center; /* ALIGN TEXT/IMAGE VERTICALLY IN THE MIDDLE */
+  justify-content: center;
   max-width: 1200px; 
   margin: 80px auto; /* Centers the block and adds top/bottom spacing */
-  padding: 0 50px; /* Internal padding */
+  padding: 0 50px;
   gap: 50px;
   box-sizing: border-box;
 }
@@ -133,8 +133,13 @@ body {
 .about-me-text {
   flex: 3; /* Gives text about 60% of the horizontal space */
   color: #eee;
+}
+
+/* NEW: Style the new paragraph container */
+.about-text-content p {
   font-size: 20px;
   line-height: 1.6;
+  margin-bottom: 20px; /* Space between each paragraph point */
 }
 
 .about-me-image {
@@ -147,7 +152,6 @@ body {
   margin-top: 0; /* Shifts the SVG up slightly to align better with the "About me" title */
   max-width: 100%;
 }
-
 /* Ensure the SVG image itself respects its container */
 .about-me-image img {
   max-width: 100%; /* Ensure it scales down if the container is small */
@@ -291,14 +295,60 @@ body {
   background-color: #201f1f;
 }
 
+.about-me-image {
+  flex: 2; 
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Align the image to the top */
+  margin-top: 50px; /* Slight adjustment to move the SVG up to align with text */
+  max-width: 100%;
+  margin-top: 165px;
+  margin-left: 100px;
+}
+
+/* Ensure the SVG is sized appropriately */
+.about-me-image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px; /* Control the overall size of the illustration */
+}
+
+
+.about-me-text {
+  flex: 6.5;
+  padding-left: 10px; /* Add back a small left padding for section alignment */
+  max-width: 900px;
+}
+
+/* New: Style the paragraph points */
+.about-text-content p {
+    margin-bottom: 15px; /* Reduce space between points */
+}
+
+/* Ensure the text content is styled correctly */
+.about-text-content {
+  color: #eee;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.about-me-section-wrapper {
+  display: flex; /* The key to side-by-side layout */
+  align-items: flex-start; /* Aligns the text and image to the top of the section */
+  justify-content: center; 
+  max-width: 1200px; 
+  margin: 50px 0; 
+  padding: 0 50px;
+  gap: 80px;
+  box-sizing: border-box;
+}
+
 .intro {
   text-align: left;
   font-size: 25px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   line-height: 30px;
-  padding-left: 50px;
-  padding-top: 90px;
-  padding-bottom: 110px;
+  /* Removed conflicting padding */
   background-color: #201f1f;
 }
 
