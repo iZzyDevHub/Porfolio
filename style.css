@@ -6,8 +6,7 @@ body {
   color: #eee;
   font-family: 'Poppins', sans-serif;
 }
-
-
+/*landing page*/
 .landing-page-container {
   display: grid;
   grid-template-columns: 25% 75%;
@@ -32,7 +31,6 @@ body {
   color: #ffffff; /* White text for contrast on dark background */
 }
 
-/* Absolute positioning for the profile picture */
 .profile-pic-absolute {
   position: absolute;
   top: 50%; 
@@ -57,6 +55,299 @@ body {
   max-width: 700px;
   margin-top: 30px;
 }
+
+/*second about me*/
+.hi b {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+  background-color: #201f1f;
+}
+
+.about-me-image {
+  flex: 2; 
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Align the image to the top */
+  margin-top: 50px; /* Slight adjustment to move the SVG up to align with text */
+  max-width: 100%;
+  margin-top: 165px;
+  margin-left: 100px;
+}
+
+/* Ensure the SVG is sized appropriately */
+.about-me-image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px; /* Control the overall size of the illustration */
+}
+
+.about-me-text {
+  flex: 6.5;
+  padding-left: 10px; /* Add back a small left padding for section alignment */
+  max-width: 900px;
+}
+
+/* New: Style the paragraph points */
+.about-text-content p {
+    margin-bottom: 15px; /* Reduce space between points */
+}
+
+/* Ensure the text content is styled correctly */
+.about-text-content {
+  color: #eee;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.about-me-section-wrapper {
+  display: flex; /* The key to side-by-side layout */
+  align-items: flex-start; /* Aligns the text and image to the top of the section */
+  justify-content: center; 
+  max-width: 1200px; 
+  margin: 50px 0; 
+  padding: 0 50px;
+  gap: 80px;
+  box-sizing: border-box;
+}
+
+.intro {
+  text-align: left;
+  font-size: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  line-height: 30px;
+  /* Removed conflicting padding */
+  background-color: #201f1f;
+}
+
+.about {
+  font-size: 50px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/*skills*/
+.skills{
+  font-size: 50px;
+  display: block;
+  margin-bottom: 40px;
+  padding-left: 50px;
+  padding-bottom: 40px;
+}
+
+/* Add this new CSS rule to your stylesheet */
+.skills-track {
+  display: flex;
+  width: calc(200px * 20); /* This makes the container as wide as its content */
+  animation: scroll 25s linear infinite;
+  gap: 30px;
+  padding-bottom: 70px;
+  margin-bottom: 50px;
+}
+
+/* Update your existing skills_group rule */
+.skills_group {
+  overflow: hidden; /* This hides any content that overflows horizontally */
+}
+
+/* Update your card-container rule */
+.card-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+  font-size: 15px;
+  width: 100%;
+  gap: 30px;
+}
+
+/* Update your keyframes rule for a seamless loop */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-200px * 10)); /* Moves one full container width to the left */
+  }
+}
+
+.card img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain; /* Ensures the image fits within the dimensions without distortion */
+}
+
+.card {
+  border: 3px solid #555;
+  text-align: center;
+  padding: 30px 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  flex: 1;
+  min-width: 80px;
+  max-width: 1000px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.card h3 {
+  text-align: center;
+}
+
+.projects {
+  font-size: 50px;
+  display: block;
+  padding-left: 50px;
+}
+
+.p1 {
+  font-size: 20px;
+  display: block;
+  padding-left: 50px;
+  padding-bottom: 30px;
+  font-weight: 5px
+  ;
+}
+
+.container {
+  background-color: #524d4d;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: background-color 0.5s ease;
+  transition: transform 0.7s ease;
+  margin-bottom: 50px;
+}
+
+.container:hover {
+  box-shadow: 0 0 15px #524d4d;
+  transform: translateY(-5px);
+}
+
+.project-list {
+  display: flex;
+  justify-content: center; /* This centers the group of items */
+  gap: 20px; /* This creates an equal gap between each item */
+  flex-wrap: wrap; /* Allows the items to wrap to a new line on smaller screens */
+  padding-bottom: 40px;
+}
+
+.p-w {
+  font-size: 18px;
+}
+
+.t-a {
+  font-size: 18px;
+}
+
+.l-p {
+  font-size: 18px;
+}
+
+/*contact info*/
+.contact {
+  font-size: 50px;
+  display: block;
+  padding-left: 50px;
+  margin-bottom: 20px;
+}
+
+.if-you {
+  font-size: 20px;
+  display: block;
+  padding-left: 50px;
+  padding-bottom: 30px;
+}
+
+
+/* New Contact Details Styling */
+.contact-details-wrapper {
+  padding-left: 50px; /* Keep consistent with other sections */
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px; /* Spacing between contact items */
+  font-size: 20px;
+}
+
+.contact-icon {
+  color: #ffffff; /* Icon color (similar to the screenshot's purple/blue) */
+  font-size: 28px;
+  width: 50px; /* Fixed width for icon alignment */
+  text-align: center;
+  margin-right: 20px;
+}
+
+.contact-item a,
+.contact-item span {
+  color: #eee;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #746d6d;
+}
+
+/* Social Links Styling (The row of circles at the bottom) */
+.social-links {
+  display: flex;
+  justify-content: center; /* Center the icons */
+  gap: 15px;
+  padding-bottom: 20px;
+  flex-wrap: wrap; /* Allows icons to wrap on small screens */
+}
+
+.social-icon-btn {
+  background-color: #524d4d; /* Background color (similar to your right content area) */
+  color: #ffffff; /* Icon color */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon-btn:hover {
+  background-color: #ffffff;
+  color: #201f1f; /* Dark background color on hover for contrast */
+  transform: translateY(-3px);
+}
+
+.footer-bar {
+  background-color: #201f1f; 
+  color: #eee;
+  text-align: center;
+  padding: 20px 0; 
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+}
+
 
 
 /* Media Queries */
@@ -214,7 +505,7 @@ body {
   .hi {
     font-size: 20px;
     margin-top: 10px;
-    padding-top: 40px;
+    padding-top: 130px;
     padding-left: 10px;
   }
 
@@ -243,335 +534,177 @@ body {
 
 /* For screens smaller than 480px (e.g., small phones) */
 @media (max-width: 480px) {
+  /* --- Landing Page Adjustments --- */
   .right-content-area {
     padding: 40px 15px;
   }
 
   .profile-pic-absolute {
-    width: 200px;
-    height: 200px;
+    width: 180px; /* Smaller profile picture */
+    height: 180px;
+    top: 35vh; /* Move it up slightly for the smaller screen */
   }
 
   .hi {
-    font-size: 12px;
-    padding-top: 70px;
+    font-size: 14px; /* Adjusting font size for smaller screens */
+    line-height: 1.4;
+    padding-top: 50px; /* Reduced top padding */
+    padding-left: 0;
   }
 
   .hi b {
-    font-size: 20px;
+    font-size: 24px;
+    margin-bottom: 5px;
   }
 
-  .intro {
-    font-size: 16px;
-    line-height: 22px;
-    padding: 20px 15px;
+  /* --- About Me Section Adjustments --- */
+  .about-me-section-wrapper {
+    flex-direction: column; /* Stack vertically */
+    align-items: center;
+    padding: 0 15px;
+    margin: 40px auto;
+    gap: 20px;
+  }
+
+  .about-me-text {
+    max-width: 100%;
+    padding-left: 0;
+    order: 1; /* Put text after image/illustration */
+  }
+
+  .about-me-image {
+    order: 2; /* Put illustration before text */
+    margin-left: 0;
+    margin-top: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-me-image img {
+    max-height: 180px; /* Smaller image/illustration */
   }
 
   .about {
     font-size: 35px;
+    text-align: center;
+    padding-left: 0;
+  }
+  
+  .intro {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 0; /* Remove padding from intro */
+    text-align: left; /* Keep text readable */
   }
 
+  /* --- Skills Section Adjustments --- */
   .skills {
-    font-size: 50px;
+    font-size: 40px;
+    padding-left: 15px;
+    text-align: center; /* Center the section title */
+
   }
 
-  ul {
-    padding-left: 20px;
+  .skills-group {
+    /* Set height to allow scroll bar to appear inside the container on mobile, 
+       otherwise it can look odd */
+    padding: 0;
   }
-}
-
-
-.hi b {
-  font-size: 30px;
-  display: block;
-  margin-bottom: 10px;
-}
 
 
 
-.body {
-  margin: 0;
-  padding: 0;
-  background-color: #201f1f;
-}
+  .card-container {
+    flex-wrap: nowrap; /* Ensure cards remain in a row for scroll */
+    gap: 15px;
+  }
+  
+  .card {
+    min-width: 120px; /* Give cards a minimum readable width */
+    padding: 15px 10px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
 
-.about-me-image {
-  flex: 2; 
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Align the image to the top */
-  margin-top: 50px; /* Slight adjustment to move the SVG up to align with text */
-  max-width: 100%;
-  margin-top: 165px;
-  margin-left: 100px;
-}
+  .card img {
+    width: 40px;
+    height: 40px;
+  }
 
-/* Ensure the SVG is sized appropriately */
-.about-me-image img {
+  /* --- Projects Section Adjustments --- */
+  .projects {
+    font-size: 40px;
+    padding-left: 15px;
+    text-align: center; /* Center the section title */
+    margin-top: 10px;
+  }
+
+  .p1 {
+    font-size: 16px;
+    padding-left: 15px;
+    text-align: center; /* Center the description */
+  }
+
+  .project-list {
+    padding: 0 15px;
+  }
+
+  .container {
+    width: 100%; /* Make containers full width */
     max-width: 100%;
-    height: auto;
-    max-height: 300px; /* Control the overall size of the illustration */
-}
-
-
-.about-me-text {
-  flex: 6.5;
-  padding-left: 10px; /* Add back a small left padding for section alignment */
-  max-width: 900px;
-}
-
-/* New: Style the paragraph points */
-.about-text-content p {
-    margin-bottom: 15px; /* Reduce space between points */
-}
-
-/* Ensure the text content is styled correctly */
-.about-text-content {
-  color: #eee;
-  font-size: 15px;
-  line-height: 1.5;
-}
-
-.about-me-section-wrapper {
-  display: flex; /* The key to side-by-side layout */
-  align-items: flex-start; /* Aligns the text and image to the top of the section */
-  justify-content: center; 
-  max-width: 1200px; 
-  margin: 50px 0; 
-  padding: 0 50px;
-  gap: 80px;
-  box-sizing: border-box;
-}
-
-.intro {
-  text-align: left;
-  font-size: 25px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  line-height: 30px;
-  /* Removed conflicting padding */
-  background-color: #201f1f;
-}
-
-.about {
-  font-size: 50px;
-  display: block;
-  margin-bottom: 20px;
-}
-
-
-.skills{
-  font-size: 50px;
-  display: block;
-  margin-bottom: 40px;
-  padding-left: 50px;
-  padding-bottom: 40px;
-}
-
-/* Add this new CSS rule to your stylesheet */
-.skills-track {
-  display: flex;
-  width: calc(200px * 20); /* This makes the container as wide as its content */
-  animation: scroll 25s linear infinite;
-  gap: 30px;
-  padding-bottom: 70px;
-  margin-bottom: 50px;
-}
-
-/* Update your existing skills_group rule */
-.skills_group {
-  overflow: hidden; /* This hides any content that overflows horizontally */
-}
-
-/* Update your card-container rule */
-.card-container {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  font-family: 'Poppins', sans-serif;
-  font-weight: bolder;
-  font-size: 15px;
-  width: 100%;
-  gap: 30px;
-}
-
-/* Update your keyframes rule for a seamless loop */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
+    margin-bottom: 20px;
+    padding: 15px;
+    box-sizing: border-box;
   }
-  100% {
-    transform: translateX(calc(-200px * 10)); /* Moves one full container width to the left */
+  
+  .container-text {
+    font-size: 16px;
+  }
+
+  /* --- Contact Section Adjustments --- */
+  .contact {
+    margin-top: 20px;
+    font-size: 40px;
+    padding-left: 15px;
+    text-align: center; /* Center the section title */
+  }
+
+  .if-you {
+    font-size: 16px;
+    padding-left: 15px;
+    text-align: center; /* Center the description */
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+
+  .contact-details-wrapper {
+    padding: 0 15px 30px 15px; /* Adjust padding for mobile */
+  }
+
+  .contact-item {
+    font-size: 16px;
+  }
+  
+  .contact-icon {
+    font-size: 20px;
+    width: 30px;
+    margin-right: 10px;
+  }
+
+  /* Footer/Social Links */
+  .social-links {
+    gap: 10px;
+    padding-bottom: 15px;
+  }
+
+  .social-icon-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .footer-bar {
+    padding: 15px 0;
+    font-size: 14px;
+    margin-top: 10px;
   }
 }
-
-.card img {
-  width: 60px;
-  height: 60px;
-  object-fit: contain; /* Ensures the image fits within the dimensions without distortion */
-}
-
-.card {
-  border: 3px solid #555;
-  text-align: center;
-  padding: 30px 10px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-  flex: 1;
-  min-width: 80px;
-  max-width: 1000px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 12px;
-
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
-}
-
-.card h3 {
-  text-align: center;
-}
-
-.projects {
-  font-size: 50px;
-  display: block;
-  padding-left: 50px;
-}
-
-.p1 {
-  font-size: 20px;
-  display: block;
-  padding-left: 50px;
-  padding-bottom: 30px;
-  font-weight: 5px
-  ;
-}
-
-.container {
-  background-color: #524d4d;
-  border-radius: 8px;
-  padding: 20px;
-  width: 300px;
-  height: 300px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  transition: background-color 0.5s ease;
-  transition: transform 0.7s ease;
-  margin-bottom: 50px;
-}
-
-.container:hover {
-  box-shadow: 0 0 15px #524d4d;
-  transform: translateY(-5px);
-}
-
-.project-list {
-  display: flex;
-  justify-content: center; /* This centers the group of items */
-  gap: 20px; /* This creates an equal gap between each item */
-  flex-wrap: wrap; /* Allows the items to wrap to a new line on smaller screens */
-  padding-bottom: 40px;
-}
-
-.p-w {
-  font-size: 18px;
-}
-
-.t-a {
-  font-size: 18px;
-}
-
-.l-p {
-  font-size: 18px;
-}
-
-.contact {
-  font-size: 50px;
-  display: block;
-  padding-left: 50px;
-  margin-bottom: 20px;
-}
-
-.if-you {
-  font-size: 20px;
-  display: block;
-  padding-left: 50px;
-  padding-bottom: 30px;
-}
-
-
-/* New Contact Details Styling */
-.contact-details-wrapper {
-  padding-left: 50px; /* Keep consistent with other sections */
-  padding-top: 20px;
-  padding-bottom: 50px;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 25px; /* Spacing between contact items */
-  font-size: 20px;
-}
-
-.contact-icon {
-  color: #ffffff; /* Icon color (similar to the screenshot's purple/blue) */
-  font-size: 28px;
-  width: 50px; /* Fixed width for icon alignment */
-  text-align: center;
-  margin-right: 20px;
-}
-
-.contact-item a,
-.contact-item span {
-  color: #eee;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.contact-item a:hover {
-  color: #746d6d;
-}
-
-/* Social Links Styling (The row of circles at the bottom) */
-.social-links {
-  display: flex;
-  justify-content: center; /* Center the icons */
-  gap: 15px;
-  padding-bottom: 20px;
-  flex-wrap: wrap; /* Allows icons to wrap on small screens */
-}
-
-.social-icon-btn {
-  background-color: #524d4d; /* Background color (similar to your right content area) */
-  color: #ffffff; /* Icon color */
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 25px;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.social-icon-btn:hover {
-  background-color: #ffffff;
-  color: #201f1f; /* Dark background color on hover for contrast */
-  transform: translateY(-3px);
-}
-
-
-.footer-bar {
-  background-color: #201f1f; 
-  color: #eee;
-  text-align: center;
-  padding: 20px 0; 
-  font-size: 18px;
-  font-family: 'Poppins', sans-serif;
-}
-
